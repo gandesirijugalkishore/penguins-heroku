@@ -23,6 +23,17 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
     st.write(input_df.head())
     st.write(input_df.select_dtypes('object').nunique())
+    data=input_df.dropna(axis=1, how='all')
+    #filtering columns that starts with specific names and converted into a dataframe
+    colsToScale=["Username","ASSIGNMENT", "LAB", "Assignment"]
+    assign_df=data[data.columns[data.columns.str.startswith(tuple(colsToScale))]]
+    st.write(assign_df)
+    
+    # lets check the percentage of missing data in each columns present in the data
+
+    no_of_rows = assign_df.shape[0]
+    percentage_of_missing_data = assign_df.isnull().sum()
+    st.write(percentage_of_missing_data)
     c=['Username',
         'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
        'ASSIGNMENT # 2 [Total Pts: 100 Score] |1344237',
