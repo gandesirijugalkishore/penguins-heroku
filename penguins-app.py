@@ -22,6 +22,7 @@ uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["cs
 if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
     st.write(input_df.head())
+    st.write(input_df.select_dtypes('object').nunique())
     c=['Username',
         'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
        'ASSIGNMENT # 2 [Total Pts: 100 Score] |1344237',
