@@ -73,7 +73,7 @@ if uploaded_file is not None:
                                                  
 else:
     st.write("""
-# Penguin Prediction App
+# STATS LAB App
 
 This app Give STATS FOR STATS LAB
 """)
