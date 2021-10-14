@@ -49,35 +49,33 @@ if uploaded_file is not None:
     assign_user_df["Number of assignments not submitted"] = assign_df.isnull().sum(axis=1)
     st.write(assign_user_df)
 
-    c=['Username',
-        'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
-       'ASSIGNMENT # 2 [Total Pts: 100 Score] |1344237',
-       'ASSIGNMENT # 3 [Total Pts: 100 Score] |1344238',
-       'Assignment # 4 [Total Pts: 100 Score] |1344239',
-       'Assignment # 5 [Total Pts: 100 Score] |1344240',
-       'ASSIGNMENT # 6 [Total Pts: 100 Score] |1344241',
-       'ASSIGNMENT # 7 [Total Pts: 100 Score] |1344242',
-       'ASSIGNMENT # 8 [Total Pts: 100 Score] |1344243',
-       'ASSIGNMENT # 9 [Total Pts: 100 Score] |1344244',
-       'ASSIGNMENT # 10 [Total Pts: 100 Score] |1344245']
+#     c=['Username',
+#         'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
+#        'ASSIGNMENT # 2 [Total Pts: 100 Score] |1344237',
+#        'ASSIGNMENT # 3 [Total Pts: 100 Score] |1344238',
+#        'Assignment # 4 [Total Pts: 100 Score] |1344239',
+#        'Assignment # 5 [Total Pts: 100 Score] |1344240',
+#        'ASSIGNMENT # 6 [Total Pts: 100 Score] |1344241',
+#        'ASSIGNMENT # 7 [Total Pts: 100 Score] |1344242',
+#        'ASSIGNMENT # 8 [Total Pts: 100 Score] |1344243',
+#        'ASSIGNMENT # 9 [Total Pts: 100 Score] |1344244',
+#        'ASSIGNMENT # 10 [Total Pts: 100 Score] |1344245']
 
-    st.write(input_df[c].isna().sum().rename("No. OF STUDNETS WHO DID NOT SUBMIT THE ASSIGNEMNT"))
-    grouped_df=input_df.groupby('Username')
-    grp=grouped_df.first()
-    st.write(grp.isnull().sum(axis=1).rename("Number of assignments not submitted"))
-    st.write(input_df["ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236"].isna().groupby(input_df['Username']).sum())
-    df = input_df[c[0:user_input]].copy()
-    st.write(df)
-    st.write(input_df[input_df[c[user_input]].isna() == 1]["Username"].rename("STUDNETS NAMES"))
+#     st.write(input_df[c].isna().sum().rename("No. OF STUDNETS WHO DID NOT SUBMIT THE ASSIGNEMNT"))
+#     grouped_df=input_df.groupby('Username')
+#     grp=grouped_df.first()
+#     st.write(grp.isnull().sum(axis=1).rename("Number of assignments not submitted"))
+#     st.write(input_df["ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236"].isna().groupby(input_df['Username']).sum())
+#     df = input_df[c[0:user_input]].copy()
+#     st.write(df)
+#     st.write(input_df[input_df[c[user_input]].isna() == 1]["Username"].rename("STUDNETS NAMES"))
     
                                                  
 else:
     st.write("""
 # Penguin Prediction App
 
-This app predicts the **Palmer Penguin** species!
-
-Data obtained from the [palmerpenguins library](https://github.com/allisonhorst/palmerpenguins) in R by Allison Horst.
+This app Give STATS FOR STATS LAB
 """)
  
 
