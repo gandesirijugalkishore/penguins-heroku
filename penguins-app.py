@@ -9,7 +9,7 @@ STUDNET GRADE ANALYTICS
 
 """)
 user_input = st.number_input("NUMBER OF ASSIGNMENTS COMPLETED")
-user_input=int(user_input)
+user_input=int(user_input)+1
 st.sidebar.header('User Input Features')
 
 st.sidebar.markdown("""
