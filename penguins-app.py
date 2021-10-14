@@ -34,6 +34,21 @@ if uploaded_file is not None:
     no_of_rows = assign_df.shape[0]
     percentage_of_missing_data = assign_df.isnull().sum()
     st.write(percentage_of_missing_data)
+    
+    #get stats based on assignemtn number
+    inp = st.number_input("ASSIGNMENTS NUMBER")
+    inp=int(inp)
+    x=assign_df.columns
+    print(x[inp-1])
+    no_of_rows = assign_df.shape[0]
+    sum_of_missing_data = assign_df[x[inp-1]].isnull().sum()
+    st.write("NUMBER OF STUDENTS WHO DID NOT SUBMIT",sum_of_missing_data)
+    
+    #Total assignmetns
+    assign_user_df =  assign_df[["Username"]]
+    assign_user_df["Number of assignments not submitted"] = assign_df.isnull().sum(axis=1)
+    st.write(assign_user_df)
+
     c=['Username',
         'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
        'ASSIGNMENT # 2 [Total Pts: 100 Score] |1344237',
