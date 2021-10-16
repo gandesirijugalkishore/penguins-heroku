@@ -48,6 +48,10 @@ if uploaded_file is not None:
     assign_user_df =  assign_df[["Username"]]
     assign_user_df["Number of assignments not submitted"] = assign_df.isnull().sum(axis=1)
     st.write(assign_user_df)
+    
+    #User
+    user_input = st.text_input("Name")
+    assign_user_df.loc[assign_user_df['Username'] == user_input]
 
 #     c=['Username',
 #         'ASSIGNMENT # 1 [Total Pts: 100 Score] |1344236',
