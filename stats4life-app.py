@@ -8,13 +8,13 @@ st.write("""
 STUDNET GRADE ANALYTICS
 
 """)
-user_input = st.number_input("NUMBER OF ASSIGNMENTS COMPLETED")
-user_input=int(user_input)+1
-st.sidebar.header('User Input Features')
+# user_input = st.number_input("NUMBER OF ASSIGNMENTS COMPLETED")
+# user_input=int(user_input)+1
+# st.sidebar.header('User Input Features')
 
-st.sidebar.markdown("""
-[Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv)
-""")
+# st.sidebar.markdown("""
+# [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv)
+# """)
 
 # # Collects user input features into dataframe
 # uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
